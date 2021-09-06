@@ -1,0 +1,9 @@
+"filter" : {
+    "type": "spatial",
+    "dimension": "spatialDim",
+    "bound": {
+        "type": "rectangular",
+        "minCoords": [10.0, 20.0],
+        "maxCoords": [30.0, 40.0]
+    }
+}
