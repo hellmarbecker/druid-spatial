@@ -19,7 +19,8 @@
       "parser": {
         "type": "string",
         "parseSpec": {
-          "format": "csv",
+          "format": "javascript",
+          "function": "function(str) { var parts = str.split(\",\"); return { latitude: parts[0], longitude: parts[1], place_name: parts[2], country_code: parts[3], timezone: parts[4] } }",
           "timestampSpec": {
             "column": "!!!_no_such_column_!!!",
             "missingValue": "2010-01-01T00:00:00Z"
