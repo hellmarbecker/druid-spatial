@@ -1,4 +1,7 @@
-function encodeGeoHash(latitude, longitude) {
+function encodeGeoHash(arg) {
+        var parts = arg.split(",");
+        var latitude = parts[0];
+        var longitude = parts[1];
         const BITS = [16, 8, 4, 2, 1];
         const BASE32 = "0123456789bcdefghjkmnpqrstuvwxyz";
 	var is_even=1;
@@ -38,5 +41,5 @@ function encodeGeoHash(latitude, longitude) {
 			ch = 0;
 	  }
 	}
-	return geohash;
+        return { latitude: parts[0], longitude: parts[1], place_name: parts[2], country_code: parts[3], timezone: parts[4], geohash: geohash };
 }
