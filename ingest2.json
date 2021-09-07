@@ -29,8 +29,8 @@
           {
             "dimName": "coordinates",
             "dims": [
-              "latitude",
-              "longitude"
+              "lat1",
+              "lon1"
             ]
           }
         ],
@@ -52,8 +52,21 @@
         "queryGranularity": "none",
         "rollup": false,
         "segmentGranularity": "day"
+      },
+      "transformSpec": {
+        "transforms": [
+          {
+            "type": "expression",
+            "expression": "longitude",
+            "name": "lon1"
+          },
+          {
+            "type": "expression",
+            "expression": "latitude",
+            "name": "lat1"
+          }
+        ]
       }
     }
   }
 }
-
