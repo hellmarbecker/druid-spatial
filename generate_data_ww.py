@@ -1,6 +1,5 @@
 import json
 from faker import Faker
-from itertools import chain
 
 fake = Faker()
 
